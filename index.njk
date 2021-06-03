@@ -1,14 +1,18 @@
 ---
+title: Title. Update me.
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
+description: Description. Update me.
+image: https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg
+date: Last Modified
 ---
-{% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+<p>
+  This is a demo website based on 
+  <a href="https://www.industrialempathy.com/posts/eleventy-high-performance-blog/">eleventy-high-performance-blog</a>.
+</p>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<div id="posts">
+  <h2>Posts</h2>
+  {% set postslist = collections.posts %}
+  {% include "postslist.njk" %}
+</div>
