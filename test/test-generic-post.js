@@ -135,6 +135,7 @@ describe("check build output for a generic post", () => {
     });
 
     describe("body", () => {
+      /*
       it("should have images", () => {
         const images = Array.from(
           doc.querySelectorAll("article :not(aside) picture img")
@@ -193,7 +194,7 @@ describe("check build output for a generic post", () => {
           expect(url).to.equal(URL + images[index].src);
         });
       });
-
+    */
       it("should have paragraphs", () => {
         const images = Array.from(doc.querySelectorAll("article > p"));
         expect(images.length).to.greaterThan(0);
